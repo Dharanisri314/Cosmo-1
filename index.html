@@ -132,12 +132,15 @@
 
 
 
-            <iframe src="botchat.html" width="500" height="500" style="border: none; border-radius: 10px;">
+
+
+            <iframe id="chatFrame" src="botchat.html"
+                style="width:500px; height:500px; border:none; border-radius:10px; display:block;">
             </iframe>
 
 
 
-         
+
 
 
 
@@ -170,6 +173,16 @@
 
 
 
+
+    <script>
+        const toggleBtn = document.getElementById('toggleChat');
+        const chatFrame = document.getElementById('chatFrame');
+
+        toggleBtn.addEventListener('click', () => {
+            // Toggle hide/show
+            chatFrame.style.display = (chatFrame.style.display === "none") ? "block" : "none";
+        });
+    </script>
 
 
 </body>
